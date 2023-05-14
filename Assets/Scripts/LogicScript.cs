@@ -25,4 +25,9 @@ public class LogicScript : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
     }
+    public void Quit()
+    {
+        Application.Quit(); //closing the application
+        Debug.Log("Player has Quit the Game"); // to check it works properly
+    }
 }
