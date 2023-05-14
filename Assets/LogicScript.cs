@@ -18,7 +18,7 @@ public class LogicScript : MonoBehaviour
     public void restartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); //this is looking for the name of a scene so our file name 
-                                                                    //but as we want the current scene we can just use GetActiveScene().naqme
+                                                                    //but as we want the current scene we can just use GetActiveScene().name
     }
 
     public void gameOver()

@@ -23,6 +23,11 @@ public class playerScript : MonoBehaviour
             
             myRigidbody.velocity = Vector2.up * flyStrength;
         }
+        if(transform.position.y > 6 || transform.position.y < (-6))
+        {
+            logic.gameOver();
+            playerIsAlive = false;
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision) //so when player collides with the hills
