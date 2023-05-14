@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hillMoveScript : MonoBehaviour
+public class rockMoveScript : MonoBehaviour
 {
     public float moveSpeed = 5; // the value here is the default speed which we can change in unity
     public float deleteZone = -14;
@@ -20,9 +20,9 @@ public class hillMoveScript : MonoBehaviour
         // and make it move at the moveSpeed
         if(transform.position.x < deleteZone)
         {
-            Debug.Log("Hill deleted.");  //adds the hill deleted message
+            Debug.Log("Rock deleted.");  //adds the hill deleted message
                                         //to our console window in unity whenever a hill is deleted
-            Destroy(gameObject); //if it moves past the deletZone value, 
+            Destroy(gameObject); //if it moves past the deleteZone value, 
                                 //destroy the game object that holds this script
         }
     }
