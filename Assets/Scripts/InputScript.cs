@@ -7,20 +7,22 @@ using TMPro;
 
 public class InputScript : MonoBehaviour
 {
+    public LogicScript logic;
     [SerializeField] private Button saveButton;
     [SerializeField] private TMP_InputField nameInputField;
-
     public void Save()
     {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         //Get name from input
-        string name = nameInputField.text;
-        Debug.Log(name); //checking if it's working with a debug message
+        string playerName = nameInputField.text;
+        int highScore = logic.playerScore;
+        Debug.Log($"Name: {playerName}, Score: {highScore}"); //checking if it's working with a debug message
 
         //Save the name into json
     }
 
     public void saveToLeaderboard() // public so we can reference it as a function in an on-click event
     {
-        SceneManager.LoadScene("Leaderboard");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Game has build index = 1, and Leaderboard has build index = 2
     }
 }
