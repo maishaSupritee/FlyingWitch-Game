@@ -10,6 +10,7 @@ public class InputScript : MonoBehaviour
     public LogicScript logic;
     [SerializeField] private Button saveButton;
     [SerializeField] private TMP_InputField nameInputField;
+    [SerializeField] HighScoreHandler highScoreHandler;
     public void Save()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
@@ -19,6 +20,8 @@ public class InputScript : MonoBehaviour
         Debug.Log($"Name: {playerName}, Score: {highScore}"); //checking if it's working with a debug message
 
         //Save the name into json
+        HighScoreElement entry = new HighScoreElement(playerName, highScore);
+        highScoreHandler.AddHighScore(entry);
     }
 
     public void saveToLeaderboard() // public so we can reference it as a function in an on-click event
