@@ -6,13 +6,14 @@ public class HighScoreHandler : MonoBehaviour
 {
     private List<HighScoreElement> highscoreList = new List<HighScoreElement>();
     [SerializeField] int maxCount = 10; //max number of score entries we want
-    [SerializeField] string filename; //the file in which we will save the scores
-    private void Start()
+    [HideInInspector] 
+    public static string filename = "highscores.json"; //the file in which we will save the scores
+    void Start()
     {
         LoadHighScores();
-        DontDestroyOnLoad(gameObject);
+        
     }
-    private void LoadHighScores()
+    public void LoadHighScores()
     {
         highscoreList = FileHandler.ReadListFromJSON<HighScoreElement>(filename);
 

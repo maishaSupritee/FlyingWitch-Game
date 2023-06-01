@@ -16,4 +16,9 @@ public class MainMenuScript : MonoBehaviour
         Application.Quit(); //closing the application
         Debug.Log("Player has Quit the Game"); // to check it works properly
     }
+
+    public void LeaderBoard()
+    {
+        SceneManager.LoadScene("Leaderboard");
+    }
 }

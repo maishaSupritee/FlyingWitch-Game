@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
-
-
 public class LeaderboardScript : MonoBehaviour
 {
     [SerializeField] private Transform container;
@@ -17,7 +14,10 @@ public class LeaderboardScript : MonoBehaviour
     private void Awake()
     {
         entry.gameObject.SetActive(false); //disabling the game object so it doesn't show on screen
-        highScoreElements = FileHandler.ReadListFromJSON<HighScoreElement>("highscores.json");
+        
+        //getting the file name from the HighScoreHandler script, possible because DontDestroyOnLoad is leaving this gameObject in every scene
+        string filename = HighScoreHandler.filename;
+        highScoreElements = FileHandler.ReadListFromJSON<HighScoreElement>(filename);
 
         for (int i = 0; i < highScoreElements.Count; i++) //sorting the highscores
         {
