@@ -9,9 +9,8 @@ public class Collectible : MonoBehaviour
     {
         if(isCollected)
             return false; //already collected item
-
         isCollected = true; //hadn't been previously collected, so now collect
-        Destroy(gameObject); //item collected so destroy the item in game
+        gameObject.SetActive(false); //deactivate the collectible so its not shown in scene anymore
         return true;
     }
 }
