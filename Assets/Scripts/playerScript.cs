@@ -35,4 +35,5 @@ public class playerScript : MonoBehaviour
         logic.gameOver();
         playerIsAlive = false;
     }
+
 }

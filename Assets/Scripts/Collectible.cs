@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    
     public bool isCollected = false;
     public bool Collect()
     {
@@ -13,4 +14,7 @@ public class Collectible : MonoBehaviour
         gameObject.SetActive(false); //deactivate the collectible so its not shown in scene anymore
         return true;
     }
+    
+
+    
 }
