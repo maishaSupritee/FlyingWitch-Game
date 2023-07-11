@@ -18,12 +18,12 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && playerIsAlive) //if user presses the space key and the player is still alive, make the player fly
+        if (Input.GetKeyDown(KeyCode.Space) && playerIsAlive) //if user presses the space key and the player is still alive, make the player fly
         {
-            
+
             myRigidbody.velocity = Vector2.up * flyStrength;
         }
-        if(transform.position.y > 6 || transform.position.y < (-6))
+        if (transform.position.y > 6 || transform.position.y < (-6))
         {
             logic.gameOver();
             playerIsAlive = false;
@@ -32,8 +32,24 @@ public class playerScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision) //so when player collides with the hills
     {
-        logic.gameOver();
-        playerIsAlive = false;
+
+        if(PotionManager.potions <= 0 )
+        {
+            logic.gameOver();
+            playerIsAlive = false;
+        }
+        else
+        {
+            PotionManager.potions--;
+            StartCoroutine(UsePotion());
+        }
+    
     }
 
+    IEnumerator UsePotion()
+    {
+        Physics2D.IgnoreLayerCollision(3, 6); //player is layer 3 and rock is layer 6
+        yield return new WaitForSeconds(3); //witch invincible for 3 seconds
+        Physics2D.IgnoreLayerCollision(3, 6, false);
+    }
 }
