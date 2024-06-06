@@ -17,7 +17,7 @@ public class PotionSpawn : MonoBehaviour
     void Update()
     {
 
-        float spawnRate = rand.Next(4, 8);
+        float spawnRate = rand.Next(10, 20);
         if (timer < spawnRate)
         {
             timer += Time.deltaTime; //creates a number that counts up every frame 
