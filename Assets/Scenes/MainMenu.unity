@@ -605,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 173}
+  m_AnchoredPosition: {x: 0, y: 221}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279567662
@@ -1497,7 +1497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &932444066
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1618,8 +1618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -82}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: 0, y: -73}
+  m_SizeDelta: {x: 573.1796, y: 166.4014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005237854
 MonoBehaviour:
@@ -1646,7 +1646,13 @@ MonoBehaviour:
     Successfully moving between
     the rocks earns 1 point.
 
-    Hitting a rock will result in Game Over.'
+    Hitting a rock will result in Game Over.
+
+
+    Collect
+    stars to earn 5 points.
+
+    Collect upto 3 potions to get 3 extra lives!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1741,7 +1747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1067831536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2262,7 +2268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 310}
+  m_AnchoredPosition: {x: 0, y: 340}
   m_SizeDelta: {x: 2000, y: 229.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462802207
@@ -3048,7 +3054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -376}
+  m_AnchoredPosition: {x: 0, y: -393}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928830344

@@ -49,7 +49,7 @@ public class playerScript : MonoBehaviour
     IEnumerator UsePotion()
     {
         Physics2D.IgnoreLayerCollision(3, 6); //player is layer 3 and rock is layer 6
-        yield return new WaitForSeconds(3); //witch invincible for 3 seconds
+        yield return new WaitForSeconds(0); //witch invincible for 3 seconds
         Physics2D.IgnoreLayerCollision(3, 6, false);
     }
 }
